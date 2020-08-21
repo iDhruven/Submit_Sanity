@@ -87,10 +87,6 @@ pipeline {
                                       
                                       while getopts "h?abitlpmer" opt; do
                                         case "$opt" in
-                                      //  h|\?)
-                                      //      print_help
-                                      //      exit 0
-                                      //      ;;
                                         i)  INIT_SUBMIT=1
                                             FULL_SUBMIT=0
                                             ;;
