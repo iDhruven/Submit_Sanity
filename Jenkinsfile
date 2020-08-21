@@ -87,7 +87,7 @@ pipeline {
                                       
                                       while getopts "h?abitlpmer" opt; do
                                         case "$opt" in
-                                        h|\?)
+                                        #h|\?)
                                             print_help
                                             exit 0
                                             ;;
