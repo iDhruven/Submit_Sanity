@@ -7,6 +7,7 @@ pipeline {
                 stage ('Parallel Stage 1'){
                     steps{
                             sh '''echo "HI"
+                                  pwd
                                   echo "Bolo"'''
                     }
                 }
