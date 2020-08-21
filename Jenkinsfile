@@ -7,8 +7,8 @@ pipeline {
                 stage ('Parallel Stage 1'){
                     steps{
                         sh (
-                            script : echo "Stage P1"
-                                     echo "Hello world!"
+                            script : "echo 'Stage P1'
+                                     echo 'Hello world!'"
                     }
                 }
                 stage ('Parallel Stage 2'){
