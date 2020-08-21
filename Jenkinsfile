@@ -2,13 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Submit Script') {
             parallel {
-                stage ('Parallel Stage 1'){
+                stage ('Submit Script Testing'){
                     steps{
-                            sh '''echo "HI"
-                                  pwd
-                                  echo "Bolo"'''
+                            sh '''echo "---------------The Submit Script Begins----------------"
+                                  SUBMIT_VERSION=2
+                                  DEBUG_MODE=1
+                                  
+                                  echo "Submit script version $SUBMIT_VERSION"
+                                  
+                                  echo "---------------The Submit Script Ends----------------""'''
                     }
                 }
       
@@ -20,7 +24,7 @@ pipeline {
             }
         }
         
-        stage('Test') {
+        stage('Build') {
             steps {
                 echo 'Testing..'
             }
