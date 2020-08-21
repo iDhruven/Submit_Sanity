@@ -9,6 +9,7 @@ pipeline {
                             sh '''echo "HI"
                                   echo "Bolo"'''
                     }
+                }
       
                 stage ('Parallel Stage 2'){
                     steps{
