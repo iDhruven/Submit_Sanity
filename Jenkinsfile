@@ -7,9 +7,6 @@ pipeline {
                 stage ('Submit Script Testing'){
                     steps{
                             sh '''echo "---------------The Submit Script Begins----------------"
-
-                                  echo "Hola
-                                        Senor"
                                   
                                   SUBMIT_VERSION=2
                                   DEBUG_MODE=1
@@ -149,6 +146,16 @@ pipeline {
                                         if [ -z "$PROJECT_MINOR_VERSION" ]; then
                                             PROJECT_MINOR_VERSION=0
                                         fi
+                                        
+                                        echo "Current project version: $PROJECT_MAJOR_VERSION.$PROJECT_MINOR_VERSION"
+                                        PROJECT_PROPOSED_MAJOR_VERSION=$(expr $PROJECT_MAJOR_VERSION + 1)
+                                        PROJECT_PROPOSED_MINOR_VERSION=0
+                                        if [ "$PROJECT_MINOR_VERSION" -gt "0" ]; then
+                                            PROJECT_PROPOSED_MAJOR_VERSION=$PROJECT_MAJOR_VERSION
+                                            PROJECT_PROPOSED_MINOR_VERSION=$(expr $PROJECT_MINOR_VERSION + 1)
+                                        fi
+                                        echo "Proposed new version: ${GREEN_TEXT}${PROJECT_PROPOSED_MAJOR_VERSION}.${PROJECT_PROPOSED_MINOR_VERSION}${CLEAR_TEXT}"
+
 
 
 
