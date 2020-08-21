@@ -125,16 +125,16 @@ pipeline {
                                       # TODO: check for OS and exit if not macOS
 
                                       # Cool logo goes here
-           #                    echo "     ______  _______   
-           #                              |      \/       \  
-           #                             /          /\     \ 
-           #                            /     /\   / /\     |
-           #                           /     /\ \_/ / /    /|
-           #                          |     |  \|_|/ /    / |
+           #                    echo " $(tput setaf 196)    ______  _______   
+           #                              |      \\/       \\  
+           #                             /          /\\     \\ 
+           #                            /     /\\   / /\\     |
+           #                           /     /\\ \\_/ / /    /|
+           #                          |     |  \\|_|/ /    / |
            #                          |     |       |    |  |
-           #                          |\____\       |____|  /$(tput setaf 196)O$(tput setaf 202)R$(tput setaf 208)P$(tput setaf 214)H$(tput setaf 220)U$(tput setaf 226)N$(tput setaf 196)
+           #                          |\\____\\       |____|  /$(tput setaf 196)O$(tput setaf 202)R$(tput setaf 208)P$(tput setaf 214)H$(tput setaf 220)U$(tput setaf 226)N$(tput setaf 196)
            #                          | |    |      |    | / 
-           #                           \|____|      |____|/${CLEAR_TEXT}
+           #                           \\|____|      |____|/${CLEAR_TEXT}
            #                            "
 
 
