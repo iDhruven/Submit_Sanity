@@ -16,6 +16,16 @@ pipeline {
                                      echo "$(tput setaf 208)DEBUG MODE ENABLED$(tput sgr0)"
                                   fi      
                                   
+                                  #Project settings
+                                   PROJECT="Morphun"
+                                   SUBMIT_TO="GoldenGate Azul Hunter Archer"
+                                   MA_PROJECT="Morphun_AzulAssets"
+                                   GIT_REPO_URL="https://github.siri.apple.com/cslt/morphun.git"
+                                   ARTIFACTORY_URL="https://artifactory.siri.apple.com"
+                                   RELEASE_EMAIL_FROM=`git config user.email`
+                                   RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
+                                   
+
                                   echo "---------------The Submit Script Ends----------------"'''
                     }
                 }
