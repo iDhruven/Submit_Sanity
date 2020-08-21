@@ -8,7 +8,8 @@ pipeline {
                     steps{
                             sh '''echo "---------------The Submit Script Begins----------------"
 
-                                  git config --list
+                                  echo "Hola
+                                        Senor"
                                   
                                   SUBMIT_VERSION=2
                                   DEBUG_MODE=1
@@ -87,6 +88,12 @@ pipeline {
                                       
                                       while getopts "h?abitlpmer" opt; do
                                         case "$opt" in
+                                        h|?)
+                                            print_help
+                                            exit 0
+                                            ;;
+                                      
+                                        
                                         i)  INIT_SUBMIT=1
                                             FULL_SUBMIT=0
                                             ;;
