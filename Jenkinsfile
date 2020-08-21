@@ -12,6 +12,10 @@ pipeline {
                                   
                                   echo "Submit script version $SUBMIT_VERSION"
                                   
+                                  if [ $DEBUG_MODE -eq 1 ]; then 
+                                     echo "$(tput setaf 208)DEBUG MODE ENABLED$(tput sgr0)"
+                                  fi      
+                                  
                                   echo "---------------The Submit Script Ends----------------"'''
                     }
                 }
