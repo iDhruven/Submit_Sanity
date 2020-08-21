@@ -44,6 +44,19 @@ pipeline {
                                      #GREEN_TEXT=$(tput setaf 2)
                                      #RED_TEXT=$(tput setaf 1)
                                      #CLEAR_TEXT=$(tput sgr0)
+                                     
+                                     
+                                   # getopts
+                                     RESUBMIT=0
+                                     FULL_SUBMIT=1
+                                     PROJECT_SUBMIT=0
+                                     INIT_SUBMIT=0
+                                     TAG_SUBMIT=0
+                                     ARTIFACTORY_SUBMIT=0
+                                     MOBILE_ASSETS_SUBMIT=0
+                                     PYTHON_MORPHUN_SUBMIT=0
+                                     RELEASE_EMAIL_SUBMIT=0
+
 
                                    
 
