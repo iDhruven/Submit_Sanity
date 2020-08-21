@@ -136,6 +136,19 @@ pipeline {
                                      | |    |      |    | / 
                                       \\|____|      |____|/${CLEAR_TEXT}
                                        "
+                                       
+                                       
+                                      # Actual script begins here
+                                        PROJECT_TAG=`git tag -l | grep "$PROJECT-*" | sed "s/$PROJECT-//" | sort -n | tail -1`
+                                      
+                                      # Parse out major identifier only
+                                        PROJECT_MAJOR_VERSION=`echo $PROJECT_TAG | egrep -o '\d+' | head -1`
+                                      
+                                      # Get everything else
+                                        PROJECT_MINOR_VERSION=`sed -E "s/^[^\.]*\.?//" <<< $PROJECT_TAG`
+                                        if [ -z "$PROJECT_MINOR_VERSION" ]; then
+                                            PROJECT_MINOR_VERSION=0
+                                        fi
 
 
 
