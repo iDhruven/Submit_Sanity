@@ -149,6 +149,7 @@ pipeline {
                                         
                                         echo "Current project version: $PROJECT_MAJOR_VERSION.$PROJECT_MINOR_VERSION"
                                         echo "The PROJECT Major Version is --> : " $PROJECT_MAJOR_VERSION
+                                        echo "The PROJECT Tag is --> : " $PROJECT_TAG
                                         
                                 #        PROJECT_PROPOSED_MAJOR_VERSION=$(expr $PROJECT_MAJOR_VERSION + 1)
                                 #        PROJECT_PROPOSED_MINOR_VERSION=0
