@@ -12,7 +12,7 @@ pipeline {
                                   
                                   echo "Submit script version $SUBMIT_VERSION"
                                   
-                                  echo "---------------The Submit Script Ends----------------""'''
+                                  echo "---------------The Submit Script Ends----------------"'''
                     }
                 }
       
