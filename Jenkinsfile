@@ -142,7 +142,7 @@ pipeline {
                                         PROJECT_TAG=`git tag -l | grep "$PROJECT-*" | sed "s/$PROJECT-//" | sort -n | tail -1`
                                       
                                       # Parse out major identifier only
-                                        PROJECT_MAJOR_VERSION=`echo $PROJECT_TAG | egrep -o '\d+' | head -1`
+                                        PROJECT_MAJOR_VERSION=`echo $PROJECT_TAG | egrep -o '\\d+' | head -1`
                                       
                                       # Get everything else
                                         PROJECT_MINOR_VERSION=`sed -E "s/^[^\.]*\.?//" <<< $PROJECT_TAG`
