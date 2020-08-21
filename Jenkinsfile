@@ -28,6 +28,24 @@ pipeline {
                                    RELEASE_EMAIL_FROM=`git config user.email`
                                    RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
                                    
+                                   # Files 
+                                     GIT_IGNORE=".gitignore"
+                                     SUBMIT_IGNORE=("gradle/wrapper/gradle-wrapper.jar")
+
+                                   # Reset in case getopts has been used previously
+                                     OPTIND=1
+
+                                   # Assigned later
+                                     RADARS=
+                                     BUG_RADARS=
+                                     API_CHANGES=
+
+                                   # Text colors
+                                     GREEN_TEXT=$(tput setaf 2)
+                                     RED_TEXT=$(tput setaf 1)
+                                     CLEAR_TEXT=$(tput sgr0)
+
+                                   
 
                                   echo "---------------The Submit Script Ends----------------"'''
                     }
