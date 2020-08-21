@@ -19,14 +19,14 @@ pipeline {
                                      echo "$(tput setaf 208)DEBUG MODE ENABLED$(tput sgr0)"
                                   fi      
                                   
-                                  #Project settings
-                                   PROJECT="Morphun"
-                                   SUBMIT_TO="GoldenGate Azul Hunter Archer"
-                                   MA_PROJECT="Morphun_AzulAssets"
-                                   GIT_REPO_URL="https://github.siri.apple.com/cslt/morphun.git"
-                                   ARTIFACTORY_URL="https://artifactory.siri.apple.com"
-                                   RELEASE_EMAIL_FROM=`git config user.email`
-                                   RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
+                                  # Project settings
+                                    PROJECT="Morphun"
+                                    SUBMIT_TO="GoldenGate Azul Hunter Archer"
+                                    MA_PROJECT="Morphun_AzulAssets"
+                                    GIT_REPO_URL="https://github.siri.apple.com/cslt/morphun.git"
+                                    ARTIFACTORY_URL="https://artifactory.siri.apple.com"
+                                    RELEASE_EMAIL_FROM=`git config user.email`
+                                    RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
                                    
                                    # Files 
                                      GIT_IGNORE=".gitignore"
@@ -56,6 +56,34 @@ pipeline {
                                      MOBILE_ASSETS_SUBMIT=0
                                      PYTHON_MORPHUN_SUBMIT=0
                                      RELEASE_EMAIL_SUBMIT=0
+                                     
+                                     
+                                    # print help
+                                      print_help() {
+                                        echo ""
+                                        echo "Using the script without any options will result in a full submission of $PROJECT."
+                                        echo ""
+                                        echo "Any combination of Major, Minor version is allowed. This allows for future submissions as well as resubmissions."
+                                        echo ""
+                                        echo "Example usage:"
+                                        echo "• Full submission: ./submit or ./submit -a"
+                                        echo "• Submit $PROJECT to B&I only: ./submit -b"
+                                        echo "• Submit MobileAssets and artifactory package: ./submit -mp"
+                                        echo ""
+                                        echo "Using any combination of options is allowed."
+                                        echo ""
+                                        echo "  -a : full submission"
+                                        echo "  -i : initialize submission"
+                                        echo "  -b : submit $PROJECT to B&I"
+                                        echo "  -t : tag submission and push to github"
+                                        echo "  -p : submit macOS artifactory package"
+                                        echo "  -m : submit MobileAssets"
+                                        echo "  -l : submit python Morphun"
+                                        echo "  -e : send release email"
+                                        echo "  -h,? : this help message"
+                                        echo ""
+                                      }
+
 
 
                                    
