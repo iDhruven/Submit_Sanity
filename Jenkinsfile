@@ -7,6 +7,9 @@ pipeline {
                 stage ('Submit Script Testing'){
                     steps{
                             sh '''echo "---------------The Submit Script Begins----------------"
+                                  
+                                  git --version
+                                  
                                   SUBMIT_VERSION=2
                                   DEBUG_MODE=1
                                   
