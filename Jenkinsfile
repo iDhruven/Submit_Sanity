@@ -41,9 +41,9 @@ pipeline {
                                      API_CHANGES=
 
                                    # Text colors
-                                     GREEN_TEXT=$(tput setaf 2)
-                                     RED_TEXT=$(tput setaf 1)
-                                     CLEAR_TEXT=$(tput sgr0)
+                                     #GREEN_TEXT=$(tput setaf 2)
+                                     #RED_TEXT=$(tput setaf 1)
+                                     #CLEAR_TEXT=$(tput sgr0)
 
                                    
 
