@@ -83,6 +83,59 @@ pipeline {
                                         echo "  -h,? : this help message"
                                         echo ""
                                       }
+                                      
+                                      
+                                      while getopts "h?abitlpmer" opt; do
+                                        case "$opt" in
+                                        h|\?)
+                                            print_help
+                                            exit 0
+                                            ;;
+                                        i)  INIT_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        t)  TAG_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        b)  PROJECT_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        p)  ARTIFACTORY_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        m)  MOBILE_ASSETS_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        l)  PYTHON_MORPHUN_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        e)  RELEASE_EMAIL_SUBMIT=1
+                                            FULL_SUBMIT=0
+                                            ;;
+                                        a)  FULL_SUBMIT=1
+                                            ;;
+                                        r)  RESUBMIT=1
+                                            ;;
+                                        esac
+                                      done
+                                      
+                                      # TODO: check for OS and exit if not macOS
+
+                                      # Cool logo goes here
+                                        echo "$(tput setaf 196)     ______  _______   
+                                         |      \/       \  
+                                        /          /\     \ 
+                                       /     /\   / /\     |
+                                      /     /\ \_/ / /    /|
+                                     |     |  \|_|/ /    / |
+                                     |     |       |    |  |
+                                     |\____\       |____|  /$(tput setaf 196)O$(tput setaf 202)R$(tput setaf 208)P$(tput setaf 214)H$(tput setaf 220)U$(tput setaf 226)N$(tput setaf 196)
+                                     | |    |      |    | / 
+                                      \|____|      |____|/${CLEAR_TEXT}
+                                       "
+
+
+
 
 
 
