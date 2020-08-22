@@ -6,8 +6,8 @@ print ("------------------------------The Submit Script Begins here-------------
 SUBMIT_VERSION=2
 DEBUG_MODE=os.environ['DEBUG_MODE']
 
-print "Submit script version:", SUBMIT_VERSION
-print "Debug Mode:", DEBUG_MODE
+print ("Submit script version:", SUBMIT_VERSION)
+print ("Debug Mode:", DEBUG_MODE)
 
 if DEBUG_MODE == 1:
   print ("DEBUG MODE ENABLED")
@@ -46,13 +46,13 @@ RELEASE_EMAIL_SUBMIT=0
 # print help
 def print_help():
     print ("")
-    print "Using the script without any options will result in a full submission of : ", PROJECT
+    print ("Using the script without any options will result in a full submission of : ", PROJECT)
     print ("")
     print ("Any combination of Major, Minor version is allowed. This allows for future submissions as well as resubmissions.")
     print ("")
     print ("Example usage:")
     print ("Full submission: ./submit or ./submit -a")
-    print "Submit ", PROJECT, "to B&I only: ./submit -b"
+    print ("Submit ", PROJECT, "to B&I only: ./submit -b")
     print ("Submit MobileAssets and artifactory package: ./submit -mp")
     print ("")
     print ("Using any combination of options is allowed.")
@@ -70,7 +70,7 @@ def print_help():
 
     
 CHOICE=[os.environ['CHOICE']] 
-print "You have selected :", CHOICE
+print ("You have selected :", CHOICE)
 
 H = 'H'
 A = 'A'
@@ -99,7 +99,7 @@ if CHOICE == A:
   print ("Full Submission Script comes here!")
   FULL_SUBMIT=1
 if CHOICE == B:
-  print "Submit ", PROJECT ,"to B&I Script comes here!"
+  print ("Submit ", PROJECT ,"to B&I Script comes here!")
   PROJECT_SUBMIT=1
   FULL_SUBMIT=0
 if CHOICE == E:
