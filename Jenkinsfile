@@ -5,12 +5,8 @@ pipeline {
         stage('Submit Script') {
             parallel {
                 stage ('Submit Script Testing'){
-                    steps{
-                            sh '''echo "---------------The Submit Script Begins----------------"
-                                  
+                    steps{                                  
                                   python submit.py
-
-                                  echo "---------------The Submit Script Ends----------------"'''
                     }
                 }
       
