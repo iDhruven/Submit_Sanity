@@ -1,6 +1,6 @@
 import os
 
-r = \u001b[33m
+r = "\u001b[33m"
 print ("------------The Submit Script Begins here------------------")
 
 SUBMIT_VERSION=2
