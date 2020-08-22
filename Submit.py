@@ -69,7 +69,7 @@ def print_help():
 
     
 CHOICE=[os.environ['CHOICE']] 
-print CHOICE
+print "You have selected :" CHOICE
 
 H = 'H'
 A = 'A'
@@ -94,21 +94,21 @@ T = [i for i in CHOICE if T in i]
 if CHOICE == H:
   print_help()
 if CHOICE == A:
-  print ("You have selected A")
+  print ("Full Submission Script comes here!")
 if CHOICE == B:
-  print ("You have selected B")
+  print "Submit " PROJECT "to B&I Script comes here!"
 if CHOICE == E:
-  print ("You have selected E")
+  print ("Sending Release Email Script comes here!")
 if CHOICE == I:
-  print ("You have selected I")
+  print ("Initialize Submission Script comes here!")
 if CHOICE == L:
-  print ("You have selected L")
+  print ("Submit Python Morphun Script comes here!")
 if CHOICE == M:
-  print ("You have selected M")
+  print ("Submit Mobile Assests Script comes here!)
 if CHOICE == P:
-  print ("You have selected P")
+  print ("Submit macOS Artifactory Package Script comes here!")
 if CHOICE == T:
-  print ("You have selected T")
+  print ("Tag Submission and push to GitHub Script comes here!")
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
