@@ -1,5 +1,4 @@
 import os
-import git
 
 print ("-----------The Submit Script Begins here------------------")
 
