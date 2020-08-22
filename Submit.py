@@ -71,13 +71,17 @@ def print_help():
 CHOICE=[os.environ['CHOICE']] 
 print CHOICE
 
-HELP = 'H'
-result = [i for i in CHOICE if HELP in i]
-print str(result)
+H = 'H'
+H = [i for i in CHOICE if H in i]
 
-#if CHOICE == "H" or "H,A" or "H,A,B" or "H,A,B,I" or "H,A,B,I,T": 
-if CHOICE == result:  
+if CHOICE == H:
   print_help()
+
+A = 'A'
+A = [i for i in CHOICE if A in i]
+
+if CHOICE == A:
+  print ("You have selected A")
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
