@@ -68,9 +68,14 @@ def print_help():
     print ("")
 
     
-CHOICE=os.environ['CHOICE']  
+CHOICE=[os.environ['CHOICE']] 
 print CHOICE
-if CHOICE == "H" or "H,B": 
+
+HELP = "H"
+result = [i for i in CHOICE if HELP in i]
+print result
+
+if CHOICE == "H" or "H,A" or "H,A,B" or "H,A,B,I" or "H,A,B,I,T": 
   print_help()
 
 
