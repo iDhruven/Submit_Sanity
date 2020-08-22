@@ -5,7 +5,7 @@ print ("-----------The Submit Script Begins here------------------")
 SUBMIT_VERSION=2
 
 print ("Submit script version:", SUBMIT_VERSION)
-print ("Debug Mode:", $DEBUG_MODE)
+print ("Debug Mode:", DEBUG_MODE)
 
 if DEBUG_MODE == 1:
   print ("DEBUG MODE ENABLED")
