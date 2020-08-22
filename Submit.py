@@ -96,7 +96,7 @@ if CHOICE == H:
 if CHOICE == A:
   print ("Full Submission Script comes here!")
 if CHOICE == B:
-  print "Submit " PROJECT "to B&I Script comes here!"
+  print "Submit ", PROJECT "to B&I Script comes here!"
 if CHOICE == E:
   print ("Sending Release Email Script comes here!")
 if CHOICE == I:
@@ -104,7 +104,7 @@ if CHOICE == I:
 if CHOICE == L:
   print ("Submit Python Morphun Script comes here!")
 if CHOICE == M:
-  print ("Submit Mobile Assests Script comes here!)
+  print ("Submit Mobile Assests Script comes here!")
 if CHOICE == P:
   print ("Submit macOS Artifactory Package Script comes here!")
 if CHOICE == T:
