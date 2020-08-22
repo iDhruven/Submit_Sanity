@@ -72,15 +72,13 @@ CHOICE=[os.environ['CHOICE']]
 print CHOICE
 
 H = 'H'
+A = 'A'
 H = [i for i in CHOICE if H in i]
+A = [i for i in CHOICE if A in i]
 
 if CHOICE == H:
   print_help()
-
-A = 'A'
-A = [i for i in CHOICE if A in i]
-
-if CHOICE == A:
+elif CHOICE == A:
   print ("You have selected A")
 
 
