@@ -72,10 +72,11 @@ CHOICE=[os.environ['CHOICE']]
 print CHOICE
 
 HELP = "H"
-result = [i for i in CHOICE if HELP in i]
+result = [i for i in CHOICE if i in HELP]
 print str(result)
 
 if CHOICE == "H" or "H,A" or "H,A,B" or "H,A,B,I" or "H,A,B,I,T": 
+#if CHOICE == result:  
   print_help()
 
 
