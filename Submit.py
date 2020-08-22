@@ -13,7 +13,6 @@ DEBUG_MODE=1
 
 print ("Submit script version:", SUBMIT_VERSION)
 print ("Debug Mode:", DEBUG_MODE)
-print ("\e[31mHello\e[0m\n")
 
 if DEBUG_MODE == 1:
   print ("DEBUG MODE ENABLED")
