@@ -2,9 +2,6 @@ import os
 
 print ("-----------The Submit Script Begins here------------------")
 
-#print('\033[31m' + 'some red text')
-#print('\033[39m') # and reset to default color
-
 SUBMIT_VERSION=2
 DEBUG_MODE=1
 
