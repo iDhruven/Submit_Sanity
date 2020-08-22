@@ -7,7 +7,7 @@ pipeline {
                 stage ('Submit Script Testing'){
                     steps{                                  
                                   sh 'python submit.py'
-                                  sh 'printf "\e[31mHello\e[0m\n"'
+                                  sh 'printf "\\e[31mHello\\e[0m\\n"'
                     }
                 }
       
