@@ -73,13 +73,42 @@ print CHOICE
 
 H = 'H'
 A = 'A'
+B = 'B'
+E = 'E'
+I = 'I'
+L = 'L'
+M = 'M'
+P = 'P'
+T = 'T'
+
 H = [i for i in CHOICE if H in i]
 A = [i for i in CHOICE if A in i]
+B = [i for i in CHOICE if B in i]
+E = [i for i in CHOICE if E in i]
+I = [i for i in CHOICE if I in i]
+L = [i for i in CHOICE if L in i]
+M = [i for i in CHOICE if M in i]
+P = [i for i in CHOICE if P in i]
+T = [i for i in CHOICE if T in i]
 
 if CHOICE == H:
   print_help()
 if CHOICE == A:
   print ("You have selected A")
+if CHOICE == B:
+  print ("You have selected B")
+if CHOICE == E:
+  print ("You have selected E")
+if CHOICE == I:
+  print ("You have selected I")
+if CHOICE == L:
+  print ("You have selected L")
+if CHOICE == M:
+  print ("You have selected M")
+if CHOICE == P:
+  print ("You have selected P")
+if CHOICE == T:
+  print ("You have selected T")
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
