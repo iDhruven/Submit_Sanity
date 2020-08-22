@@ -1,5 +1,7 @@
 import os
 
+os.system("cls")
+
 r = "\u001b[33m"
 print ("------------The Submit Script Begins here------------------")
 
