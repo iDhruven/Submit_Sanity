@@ -138,5 +138,6 @@ amy.forward(140)
 amy.left(135) 
 amy.forward(100)
 
+turtle.done()
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
