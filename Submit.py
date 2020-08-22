@@ -18,7 +18,7 @@ MA_PROJECT="Morphun_AzulAssets"
 GIT_REPO_URL="https://github.siri.apple.com/cslt/morphun.git"
 ARTIFACTORY_URL="https://artifactory.siri.apple.com"
 
-RELEASE_EMAIL_FROM= os.system('git --version')
+RELEASE_EMAIL_FROM= os.system('git config user.email')
 
 RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
 
@@ -30,11 +30,6 @@ SUBMIT_IGNORE=("gradle/wrapper/gradle-wrapper.jar")
 
 # Reset in case getopts has been used previously
 OPTIND=1
-
-# Assigned later
-RADARS=
-BUG_RADARS=
-API_CHANGES=
 
 # Text colors
 GREEN_TEXT=os.environ['(tput setaf 2)']
