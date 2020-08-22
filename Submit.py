@@ -71,7 +71,7 @@ def print_help():
 CHOICE=[os.environ['CHOICE']] 
 print CHOICE
 
-HELP = ["H"]
+HELP = ['H']
 result = [x for x in CHOICE if x not in HELP]
 print str(result)
 
