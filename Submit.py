@@ -1,8 +1,9 @@
-coloredlogs.install(isatty=True)
+
 print ("------------The Submit Script Begins here------------------")
 
 import os
 os.system('echo "Hello World!"')
+os.system('pip --version')
 
 #print('\033[31m' + 'some red text')
 #print('\033[39m') # and reset to default color
