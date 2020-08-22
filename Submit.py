@@ -70,7 +70,7 @@ def print_help():
     
 CHOICE=os.environ['CHOICE']  
 print CHOICE
-if CHOICE == ("H","*"): 
+if CHOICE == "H": 
   print_help()
 
 
