@@ -67,10 +67,10 @@ def print_help():
     print ("  -h,? : this help message")
     print ("")
 
-print_help()
-
-
-
+    
+Choice=os.environ['Choice']  
+if Choice == "H": 
+  print_help()
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
