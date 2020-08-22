@@ -69,7 +69,7 @@ def print_help():
 
     
 CHOICE=[os.environ['CHOICE']] 
-print "You have selected :" CHOICE
+print "You have selected :", CHOICE
 
 H = 'H'
 A = 'A'
