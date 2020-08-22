@@ -12,6 +12,6 @@ print ("Submit script version:", SUBMIT_VERSION)
 print ("Debug Mode:", DEBUG_MODE)
 
 if DEBUG_MODE == 1:
-  print ("DEBUG MODE ENABLED")
+  os.system('printf ("\033[31mDEBUG MODE ENABLED\033[0m\n")
 
-os.system('printf "\\e[31m------------The Submit Script Begins here------------------\\e[0m\\n"')
+os.system('printf "\\e[31m------------The Submit Script Ends here------------------\\e[0m\\n"')
