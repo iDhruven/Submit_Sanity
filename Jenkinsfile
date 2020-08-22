@@ -7,7 +7,6 @@ pipeline {
                 stage ('Submit Script Testing'){
                     steps{                                  
                                   sh 'python submit.py'
-                                  sh 'printf "\\e[31mRED COLOR\\e[0m\\n"'
                     }
                 }
       
