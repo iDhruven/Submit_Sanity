@@ -5,8 +5,8 @@ print ("------------------------------The Submit Script Begins here-------------
 SUBMIT_VERSION=2
 DEBUG_MODE=os.environ['DEBUG_MODE']
 
-print ("Submit script version:", SUBMIT_VERSION)
-print ("Debug Mode:", DEBUG_MODE)
+print "Submit script version:", SUBMIT_VERSION
+print "Debug Mode:", DEBUG_MODE
 
 if DEBUG_MODE == 1:
   print ("DEBUG MODE ENABLED")
@@ -68,8 +68,9 @@ def print_help():
     print ("")
 
     
-Choice=os.environ['Choice']  
-if Choice == "H": 
+CHOICE=os.environ['CHOICE']  
+print CHOICE
+if CHOICE == "H": 
   print_help()
 
 
