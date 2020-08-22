@@ -28,6 +28,20 @@ print ("EMAIL:", RELEASE_EMAIL_FROM)
 GIT_IGNORE=".gitignore"
 SUBMIT_IGNORE=("gradle/wrapper/gradle-wrapper.jar")
 
+# Reset in case getopts has been used previously
+OPTIND=1
+
+# Assigned later
+RADARS=
+BUG_RADARS=
+API_CHANGES=
+
+# Text colors
+GREEN_TEXT=os.environ['(tput setaf 2)']
+RED_TEXT=os.environ['(tput setaf 1)']
+CLEAR_TEXT=os.environ['(tput sgr0)']
+
+
 
 
 
