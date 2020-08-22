@@ -96,7 +96,7 @@ if CHOICE == H:
 if CHOICE == A:
   print ("Full Submission Script comes here!")
 if CHOICE == B:
-  print "Submit ", PROJECT "to B&I Script comes here!"
+  print "Submit ", PROJECT ,"to B&I Script comes here!"
 if CHOICE == E:
   print ("Sending Release Email Script comes here!")
 if CHOICE == I:
