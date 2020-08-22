@@ -80,7 +80,7 @@ L = 'L'
 M = 'M'
 P = 'P'
 T = 'T'
-
+R = 'R'
 H = [i for i in CHOICE if H in i]
 A = [i for i in CHOICE if A in i]
 B = [i for i in CHOICE if B in i]
@@ -90,25 +90,44 @@ L = [i for i in CHOICE if L in i]
 M = [i for i in CHOICE if M in i]
 P = [i for i in CHOICE if P in i]
 T = [i for i in CHOICE if T in i]
+R = [i for i in CHOICE if R in i]
 
 if CHOICE == H:
   print_help()
 if CHOICE == A:
   print ("Full Submission Script comes here!")
+  FULL_SUBMIT=1
 if CHOICE == B:
   print "Submit ", PROJECT ,"to B&I Script comes here!"
+  PROJECT_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == E:
   print ("Sending Release Email Script comes here!")
+  RELEASE_EMAIL_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == I:
   print ("Initialize Submission Script comes here!")
+  INIT_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == L:
   print ("Submit Python Morphun Script comes here!")
+  PYTHON_MORPHUN_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == M:
   print ("Submit Mobile Assests Script comes here!")
+  MOBILE_ASSETS_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == P:
   print ("Submit macOS Artifactory Package Script comes here!")
+  ARTIFACTORY_SUBMIT=1
+  FULL_SUBMIT=0
 if CHOICE == T:
   print ("Tag Submission and push to GitHub Script comes here!")
+  TAG_SUBMIT=1
+  FULL_SUBMIT=0
+if CHOICE == R:
+  print ("Resubmit Script comes here!")
+  RESUBMIT=1
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
