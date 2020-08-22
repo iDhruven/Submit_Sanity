@@ -3,7 +3,7 @@ import os
 print ("-----------The Submit Script Begins here------------------")
 
 SUBMIT_VERSION=2
-#DEBUG_MODE=$DEBUG_MODE
+DEBUG_MODE=os.environ['DEBUG_MODE']
 print(os.environ['HOME'])
 
 print ("Submit script version:", SUBMIT_VERSION)
