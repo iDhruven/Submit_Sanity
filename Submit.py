@@ -1,4 +1,5 @@
 import os
+import turtle
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
@@ -58,7 +59,7 @@ def print_help():
     print ("")
     print ("  -a : full submission")
     print ("  -i : initialize submission")
-    print "  -b : submit ", PROJECT, "to B&I"
+    print  "  -b : submit ", PROJECT, "to B&I"
     print ("  -t : tag submission and push to github")
     print ("  -p : submit macOS artifactory package")
     print ("  -m : submit MobileAssets")
@@ -128,6 +129,14 @@ if CHOICE == T:
 if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
+  
+amy = turtle.Turtle()
+amy.color("blue")
+amy.forward(100)
+amy.left(135)
+amy.forward(140)
+amy.left(135) 
+amy.forward(100)
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
