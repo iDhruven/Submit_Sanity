@@ -1,6 +1,6 @@
 import os
 
-os.system('printf "\\e[31m------------The Submit Script Begins here------------------\\e[0m\\n"')
+os.system('printf "\e[31m------------The Submit Script Begins here------------------\e[0m\n"')
 #print ("------------The Submit Script Begins here------------------")
 
 
