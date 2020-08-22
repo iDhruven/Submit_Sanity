@@ -78,7 +78,7 @@ A = [i for i in CHOICE if A in i]
 
 if CHOICE == H:
   print_help()
-elif CHOICE == A:
+if CHOICE == A:
   print ("You have selected A")
 
 
