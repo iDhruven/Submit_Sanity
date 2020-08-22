@@ -8,6 +8,8 @@ pipeline {
                     steps{                                  
                                   sh 'python submit.py'
                                   sh 'printf "\\e[31mHello\\e[0m\\n"'
+                                  print('\033[31m' + 'some red text')
+                                  print('\033[39m') # and reset to default color
                     }
                 }
       
