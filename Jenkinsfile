@@ -20,7 +20,7 @@ pipeline {
                         expression {
                             //return readFile('Submit.py').contains('CHOICE==H') 
                             //manager.logContains('*You have selected : ['H,A']*')
-                            CHOICE == 'H'
+                            CHOICE == ('H' || 'H,A')
                         }
                     }
                     steps{
