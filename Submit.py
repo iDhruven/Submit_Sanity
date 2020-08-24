@@ -139,7 +139,7 @@ print("  /     /\   / /\     |            ")
 print(" /     /\ \_/ / /    /|            ")
 print("|     |  \|_|/ /    / |            ")
 print("|     |       |    |  |            ")
-print("|\____\       |____|  /            ")
+print("|\____\       |____|  /0RPHUN      ")
 print("| |    |      |    | /             ")
 
 logo = pyfiglet.figlet_format("Morphun", font = "whimsy"  ) 
