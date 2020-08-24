@@ -71,7 +71,7 @@ T = [i for i in CHOICE if T in i]
 R = [i for i in CHOICE if R in i]
 
 if CHOICE == H:
-  Submit_Help.print_help()
+  SubmitHelp.print_help()
 if CHOICE == A:
   print ("Full Submission Script comes here!")
   FULL_SUBMIT=1
