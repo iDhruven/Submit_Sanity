@@ -64,9 +64,9 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Notify') {
             steps {
-                echo 'Testing..'
+                echo 'Sending Email..'
             }
         }
         stage('Deploy') {
