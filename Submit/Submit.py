@@ -67,7 +67,7 @@ if CHOICE == A:
   print ("Full Submission Script comes here!")
   FULL_SUBMIT=1
 if CHOICE == B:
-  print "Submit ", SubmitProjectSettings.PROJECT ,"to B&I Script comes here!"
+  print "Submit ", PROJECT ,"to B&I Script comes here!"
   PROJECT_SUBMIT=1
   FULL_SUBMIT=0
 if CHOICE == E:
