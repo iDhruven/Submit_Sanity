@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Submit Sanity Check'){
+            steps{
+                print ("This is the Sanity Check Step!")
+            }
+        }
         stage('Submit Script') {
             parallel {
                 stage ('Submit Script Testing'){
