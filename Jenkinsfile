@@ -6,7 +6,7 @@ pipeline {
             parallel {
                 stage ('Submit Script Testing'){
                     steps{                                  
-                                  sh 'python3 submit.py'
+                                  sh 'python submit.py'
                     }
                 }
       
