@@ -17,24 +17,14 @@ pipeline {
         
         stage('Submit Script Execution') {
             parallel {
-                stages{
-                    stage('B&I'){
-                        
-                    when{
+                stage ('Submit to B&I'){
+                    when {
                         expression {
                             return params.CHOICE.contains('B')
                         }
-                    stages{
-                        stage('B&I Sanity'){
-                            steps{
-                                print("This is a BNI Sanity check!")
-                            }
-                        }
-                        stage ('B&I Execution'){
-                            steps{
-                                print ("This is B&I Submission Step!")
-                            }
-                        }
+                    }
+                    steps{
+                        print ("This is B&I Submission Step!")
                     }
                 }
                 
@@ -85,6 +75,4 @@ pipeline {
             }
         }
     }
-}
-}
 }
