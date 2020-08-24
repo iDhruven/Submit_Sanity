@@ -21,7 +21,6 @@ pipeline {
                             params.CHOICE == 'H'
                         }
                     }
-            }
                     steps{
                         sh "echo Stage P2 Choice Condition"
                     }
