@@ -1,5 +1,6 @@
 import os
 import turtle
+import pyfiglet 
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
@@ -137,8 +138,11 @@ print("  /     /\   / /\     |      ")
 print(" /     /\ \_/ / /    /|      ")
 print("|     |  \|_|/ /    / |      ")
 print("|     |       |    |  |      ")
-print("|\____\       |____|  /ORPHUN")
+print("|\____\       |____|  /      ")
 print("| |    |      |    | /       ")
 print(" \|____|      |____|/        ")
+  
+result = pyfiglet.figlet_format("orphun", font = "whimsy"  ) 
+print(result)
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
