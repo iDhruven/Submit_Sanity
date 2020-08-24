@@ -18,7 +18,7 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                                CHOICE == ('H' || 'H,A')
+                                CHOICE == 'H' || 'H,A'
                         }
                     }
                     steps{
