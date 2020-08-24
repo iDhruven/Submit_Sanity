@@ -18,7 +18,9 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                                CHOICE == 'H' || 'H,A'
+                            //return readFile('Submit.py').contains('CHOICE==H') 
+                            //manager.logContains('*You have selected : ['H,A']*')
+                            CHOICE == 'H' || 'H,A'
                         }
                     }
                     steps{
