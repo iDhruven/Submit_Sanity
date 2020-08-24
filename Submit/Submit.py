@@ -3,6 +3,7 @@ import turtle
 import pyfiglet 
 
 import SubmitHelp
+import SubmitLogo
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
@@ -33,6 +34,7 @@ MOBILE_ASSETS_SUBMIT=0
 PYTHON_MORPHUN_SUBMIT=0
 RELEASE_EMAIL_SUBMIT=0
 
+#Choice Selection
 CHOICE=[os.environ['CHOICE']] 
 print "You have selected :", CHOICE
 
@@ -94,21 +96,8 @@ if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
            
-  
-print("-----------------COOL MORPHUN LOGO------------------")  
-print("     ______  _______               ")  
-print("    |      \/       \              ")  
-print("   /          /\     \             ") 
-print("  /     /\   / /\     |            ")
-print(" /     /\ \_/ / /    /|            ")
-print("|     |  \|_|/ /    / |            ")
-print("|     |       |    |  |            ")
-print("|\____\       |____|  /0RPHUN      ")
-print("| |    |      |    | /             ")
-print(" \|____|      |____|               ")
-
-logo = pyfiglet.figlet_format("Morphun", font = "whimsy"  ) 
-print(logo)
+#Print Logo  
+SubmitLogo.print_logo()
 
 
 
