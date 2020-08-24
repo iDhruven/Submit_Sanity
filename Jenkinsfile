@@ -7,14 +7,16 @@ pipeline {
                 print ("This is the Sanity Check Step!")
             }
         }
-        stage('Submit Script') {
+        
+        stage('Submit Script'){
+            steps{
+                print ("Submit Script begins!")
+                sh 'python Submit/Submit.py'
+            }
+        }
+        
+        stage('Submit Script Execution') {
             parallel {
-                stage ('Submit Script Testing'){
-                    steps{  
-                        sh 'python Submit/Submit.py'
-                    }
-                }
-      
                 stage ('Submit to B&I'){
                     when {
                         expression {
