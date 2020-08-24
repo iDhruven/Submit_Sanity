@@ -1,3 +1,5 @@
+import SubmitProjectSettings
+
 #Print Help
 def print_help():
     print ("---------------Help Manual------------")
