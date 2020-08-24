@@ -130,14 +130,15 @@ if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
   
-amy = turtle.Turtle()
-amy.color("blue")
-amy.forward(100)
-amy.left(135)
-amy.forward(140)
-amy.left(135) 
-amy.forward(100)
-
-turtle.done()
+print("     ______  _______   
+    |      \/       \  
+   /          /\     \ 
+  /     /\   / /\     |
+ /     /\ \_/ / /    /|
+|     |  \|_|/ /    / |
+|     |       |    |  |
+|\____\       |____|  /ORPHUN
+| |    |      |    | / 
+ \|____|      |____|/"
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
