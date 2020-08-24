@@ -10,8 +10,8 @@ pipeline {
         stage('Submit Script') {
             parallel {
                 stage ('Submit Script Testing'){
-                    steps{                                  
-                                  sh 'python Submit/submit.py'
+                    steps{  
+                        sh 'python Submit/Submit.py'
                     }
                 }
       
