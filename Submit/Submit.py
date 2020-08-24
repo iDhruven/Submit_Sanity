@@ -4,6 +4,7 @@ import pyfiglet
 
 import SubmitHelp
 import SubmitLogo
+import SubmitProjectSettings
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
