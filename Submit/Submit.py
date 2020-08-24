@@ -2,7 +2,7 @@ import os
 import turtle
 import pyfiglet 
 
-import Submit/Submit_Help
+import Submit_Help
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
@@ -71,7 +71,7 @@ T = [i for i in CHOICE if T in i]
 R = [i for i in CHOICE if R in i]
 
 if CHOICE == H:
-  print_help()
+  Submit_Help.print_help()
 if CHOICE == A:
   print ("Full Submission Script comes here!")
   FULL_SUBMIT=1
