@@ -1,7 +1,7 @@
 #Morphun Logo
 
-print_logo():
-
+def print_logo():
+  
   print("-----------------COOL MORPHUN LOGO------------------")  
   print("     ______  _______               ")  
   print("    |      \/       \              ")  
