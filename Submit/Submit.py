@@ -2,7 +2,7 @@ import os
 import turtle
 import pyfiglet 
 
-import Submit_Help
+import SubmitHelp
 
 print ("------------------------------The Submit Script Begins here--------------------------------------")
 
