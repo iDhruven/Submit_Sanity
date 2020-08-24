@@ -7,8 +7,8 @@ print ("------------------------------The Submit Script Begins here-------------
 SUBMIT_VERSION=2
 DEBUG_MODE=os.environ['DEBUG_MODE']
 
-print ("Submit script version:", SUBMIT_VERSION)
-print ("Debug Mode:", DEBUG_MODE)
+print "Submit script version:", SUBMIT_VERSION
+print "Debug Mode:", DEBUG_MODE
 
 if DEBUG_MODE == 1:
   print ("DEBUG MODE ENABLED")
@@ -24,7 +24,7 @@ RELEASE_EMAIL_FROM= os.system('git config user.email')
 
 RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
 
-print ("EMAIL:", RELEASE_EMAIL_FROM)
+print "EMAIL:", RELEASE_EMAIL_FROM
 
 # Files 
 GIT_IGNORE=".gitignore"
@@ -47,21 +47,21 @@ RELEASE_EMAIL_SUBMIT=0
 # print help
 def print_help():
     print ("")
-    print ("Using the script without any options will result in a full submission of : ", PROJECT)
+    print  "Using the script without any options will result in a full submission of : ", PROJECT
     print ("")
     print ("Any combination of Major, Minor version is allowed. This allows for future submissions as well as resubmissions.")
     print ("")
     print ("Example usage:")
     print ("Full submission: ./submit or ./submit -a")
-    print ("Submit ", PROJECT, "to B&I only: ./submit -b")
+    print  "Submit ", PROJECT, "to B&I only: ./submit -b"
     print ("Submit MobileAssets and artifactory package: ./submit -mp")
     print ("")
     print ("Using any combination of options is allowed.")
     print ("")
     print ("  -a : full submission")
     print ("  -i : initialize submission")
-    print ("  -b : submit ", PROJECT, "to B&I")
-    print ("  -t : tag submission and push to github")
+    print  "  -b : submit ", PROJECT, "to B&I")
+    print ("  -t : tag submission and push to github"
     print ("  -p : submit macOS artifactory package")
     print ("  -m : submit MobileAssets")
     print ("  -l : submit python Morphun")
@@ -71,7 +71,7 @@ def print_help():
 
     
 CHOICE=[os.environ['CHOICE']] 
-print ("You have selected :", CHOICE)
+print "You have selected :", CHOICE
 
 H = 'H'
 A = 'A'
@@ -100,7 +100,7 @@ if CHOICE == A:
   print ("Full Submission Script comes here!")
   FULL_SUBMIT=1
 if CHOICE == B:
-  print ("Submit ", PROJECT ,"to B&I Script comes here!")
+  print "Submit ", PROJECT ,"to B&I Script comes here!"
   PROJECT_SUBMIT=1
   FULL_SUBMIT=0
 if CHOICE == E:
@@ -130,6 +130,8 @@ if CHOICE == T:
 if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
+           
+result = pyfiglet.figlet_format("orphun", font = "whimsy"  ) 
   
 print("     ______  _______         ")  
 print("    |      \/       \        ")  
@@ -138,11 +140,8 @@ print("  /     /\   / /\     |      ")
 print(" /     /\ \_/ / /    /|      ")
 print("|     |  \|_|/ /    / |      ")
 print("|     |       |    |  |      ")
-print("|\____\       |____|  /      ")
+print"|\____\       |____|  /      ", result
 print("| |    |      |    | /       ")
-print(" \|____|      |____|/        ")
-  
-result = pyfiglet.figlet_format("orphun", font = "whimsy"  ) 
 print(result)
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
