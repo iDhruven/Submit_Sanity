@@ -17,14 +17,22 @@ pipeline {
         
         stage('Submit Script Execution') {
             parallel {
-                stage ('Submit to B&I'){
-                    when {
+                stage ('B&I'){
+                    when{
                         expression {
                             return params.CHOICE.contains('B')
                         }
-                    }
-                    steps{
-                        print ("This is B&I Submission Step!")
+                    stages{
+                        stage('B&I Sanity'){
+                            steps{
+                                print("This is a BNI Sanity check!")
+                            }
+                        }
+                        stage ('B&I Execution'){
+                            steps{
+                                print ("This is B&I Submission Step!")
+                            }
+                        }
                     }
                 }
                 
