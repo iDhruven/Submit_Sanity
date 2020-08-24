@@ -16,5 +16,5 @@ def print_logo():
   print("| |    |      |    | /             ")
   print(" \|____|      |____|               ")
 
-  logo = pyfiglet.figlet_format("Himali Limbad", font = "poison"  ) 
+  logo = pyfiglet.figlet_format("Morphun", font = "poison"  ) 
   print(logo)
