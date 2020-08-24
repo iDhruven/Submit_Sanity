@@ -46,6 +46,7 @@ RELEASE_EMAIL_SUBMIT=0
 
 # print help
 def print_help():
+    print ("---------------Help Manual------------")
     print ("")
     print  "Using the script without any options will result in a full submission of : ", PROJECT
     print ("")
@@ -68,6 +69,7 @@ def print_help():
     print ("  -e : send release email")
     print ("  -h,? : this help message")
     print ("")
+    print ("-------------Help Manual End----------")
 
     
 CHOICE=[os.environ['CHOICE']] 
