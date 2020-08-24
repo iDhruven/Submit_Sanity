@@ -1,4 +1,4 @@
-import SubmitProjectSettings
+from SubmitProjectSettings import *
 
 #Print Help
 def print_help():
