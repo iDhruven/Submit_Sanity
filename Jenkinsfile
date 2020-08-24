@@ -21,6 +21,7 @@ pipeline {
                             script{
                                 import Submit.SubmitChoice
                                 CHOICE == H
+                            }
                         }
                     }
                     steps{
