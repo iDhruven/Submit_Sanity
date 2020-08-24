@@ -131,7 +131,6 @@ if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
            
-result = pyfiglet.figlet_format("Morphun begins here!", font = "whimsy"  ) 
   
 print("     ______  _______               ")  
 print("    |      \/       \              ")  
@@ -140,8 +139,10 @@ print("  /     /\   / /\     |            ")
 print(" /     /\ \_/ / /    /|            ")
 print("|     |  \|_|/ /    / |            ")
 print("|     |       |    |  |            ")
-print("|\____\       |____|  / ORPHUN     ")
+print("|\____\       |____|  /            ")
 print("| |    |      |    | /             ")
-print(result)
+
+logo = pyfiglet.figlet_format("Morphun", font = "whimsy"  ) 
+print(logo)
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
