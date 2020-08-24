@@ -15,11 +15,9 @@ pipeline {
                     }
                 }
       
-                stage ('Parallel Stage 2'){
+                stage ('Help Message'){
                     when {
                         expression {
-                            //return readFile('Submit.py').contains('CHOICE==H') 
-                            //manager.logContains('*You have selected : ['H,A']*')
                             return params.CHOICE.contains('H')
                         }
                     }
