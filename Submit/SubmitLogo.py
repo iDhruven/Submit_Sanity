@@ -16,7 +16,9 @@ def print_logo():
   print("| |    |      |    | /             ")
   print(" \|____|      |____|               ")
 
-  logo1 = pyfiglet.figlet_format("Morphun", font = "o8"  ) 
+  logo1 = pyfiglet.figlet_format("Morphun", font = "starwars"  )
+  logo2 = pyfiglet.figlet_format("Morphun", font = "starwars"  )
   logo = pyfiglet.figlet_format("Morphun", font = "poison"  ) 
   print(logo)
   print(logo1)
+  print(logo2)
