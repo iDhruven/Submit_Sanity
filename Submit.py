@@ -134,6 +134,7 @@ if CHOICE == R:
   RESUBMIT=1
            
   
+print("-----------------COOL MORPHUN LOGO------------------")  
 print("     ______  _______               ")  
 print("    |      \/       \              ")  
 print("   /          /\     \             ") 
