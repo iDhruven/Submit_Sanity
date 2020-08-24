@@ -19,7 +19,7 @@ pipeline {
                     when {
                         expression {
                             sh "python Submit/SubmitChoice.py"
-                            SubmitChoice.CHOICE == H
+                            CHOICE == H
                         }
                     }
                     steps{
