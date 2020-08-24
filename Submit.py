@@ -148,5 +148,54 @@ print(" \|____|      |____|               ")
 logo = pyfiglet.figlet_format("Morphun", font = "whimsy"  ) 
 print(logo)
 
+import setuptools
+
+import argparse
+import logging
+
+#import myproject
+#from . import version
+
+version_info = (9, 9, 1)
+version = '.'.join(str(c) for c in version_info)
+
+
+def entry_point():
+    parser = argparse.ArgumentParser(
+        description='Something ... something short about Morphun',
+        epilog='''Morphun start. Bacon ipsum dolor amet occaecat labore qui, ad
+                  veniam boudin capicola flank. Dolore rump jerky magna
+                  sirloin pancetta. Voluptate anim non minim nostrud ham.
+                  Excepteur kevin turkey officia kielbasa pastrami ad ham
+                  nostrud meatball tongue magna t-bone. Chuck salami mollit,
+                  fatback pig velit officia ut. Cupidatat nulla jowl, tail
+                  chicken occaecat excepteur pig beef salami non. Kevin
+                  cupim bresaola filet mignon enim.Morphun epilogue''')
+    parser.add_argument('--verbose', '-v', action='count',
+                        help='increase verbosity.  Specify multiple times '
+                             'for increased diagnostic output')
+    parser.add_argument('--version', action='version',
+                        version='%(prog)s {}'.format(version),
+                        help='show the version number and exit')
+
+    args = parser.parse_args()
+    # do stuff here
+
+if __name__ == '__main__':
+    entry_point()
+
+
+setuptools.setup(
+    name='myproject',
+    #version=myproject.version,
+    description='Does stuff',
+    url='https://github.com/me/myproject',
+    packages=['myproject'],
+    entry_points={
+        'console_scripts': ['my-script = myproject.cli:entry_point'],
+    },
+)
+
+
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
