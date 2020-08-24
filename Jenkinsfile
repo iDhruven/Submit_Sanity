@@ -18,7 +18,7 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                            import Submit.SubmitChoice
+                            sh "python Submit/SubmitChoice.py"
                             SubmitChoice.CHOICE == H
                         }
                     }
