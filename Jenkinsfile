@@ -16,8 +16,14 @@ pipeline {
                 }
       
                 stage ('Parallel Stage 2'){
+                    when {
+                        expression {
+                            params.CHOICE == 'H'
+                        }
+                    }
+            }
                     steps{
-                        sh "echo Stage P2"
+                        sh "echo Stage P2 Choice Condition"
                     }
                 }
             }
