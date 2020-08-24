@@ -60,7 +60,7 @@ def print_help():
     print ("")
     print ("  -a : full submission")
     print ("  -i : initialize submission")
-    print  "  -b : submit ", PROJECT, "to B&I")
+    print  "  -b : submit ", PROJECT, "to B&I"
     print ("  -t : tag submission and push to github"
     print ("  -p : submit macOS artifactory package")
     print ("  -m : submit MobileAssets")
