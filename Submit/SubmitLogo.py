@@ -27,7 +27,7 @@ def print_logo():
   logo8 = pyfiglet.figlet_format("Morphun", font = "doh")
   logo9 = pyfiglet.figlet_format("Morphun", font = "cosmic")
   logo10 = pyfiglet.figlet_format("Morphun", font = "broadway")
-  logo11 = pyfiglet.figlet_format("Morphun", font = " banner3-D")
+  logo11 = pyfiglet.figlet_format("Morphun", font = "banner3-D")
 
   
   
