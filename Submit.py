@@ -141,8 +141,10 @@ print("|     |  \|_|/ /    / |            ")
 print("|     |       |    |  |            ")
 print("|\____\       |____|  /0RPHUN      ")
 print("| |    |      |    | /             ")
+print(" \|____|      |____|               ")
 
 logo = pyfiglet.figlet_format("Morphun", font = "whimsy"  ) 
 print(logo)
+
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
