@@ -19,7 +19,7 @@ pipeline {
                     when {
                         expression {
                                 //import Submit.SubmitChoice
-                                Submit.SubmitChoice.CHOICE == H
+                                SubmitChoice.CHOICE == H
                         }
                     }
                     steps{
