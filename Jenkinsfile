@@ -18,8 +18,7 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                                //import Submit.SubmitChoice
-                                SubmitChoice.CHOICE == H
+                                SubmitChoice.CHOICE == H || H,A
                         }
                     }
                     steps{
