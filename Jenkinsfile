@@ -19,8 +19,8 @@ pipeline {
                     when {
                         expression {
                             script{
-                                import Submit.SubmitChoice
-                                CHOICE == H
+                                //import Submit.SubmitChoice
+                                Submit.SubmitChoice.CHOICE == H
                             }
                         }
                     }
