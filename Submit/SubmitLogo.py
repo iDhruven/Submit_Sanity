@@ -16,10 +16,10 @@ def print_logo():
   print("| |    |      |    | /             ")
   print(" \|____|      |____|               ")
 
-  logo  = pyfiglet.figlet_format("Morphun", font = "poison")
+  #logo  = pyfiglet.figlet_format("Morphun", font = "poison")
   logo1 = pyfiglet.figlet_format("Morphun", font = "stop")
   logo2 = pyfiglet.figlet_format("Morphun", font = "starwars")
-  logo3 = pyfiglet.figlet_format("Morphun", font = "stampatello")
+  #logo3 = pyfiglet.figlet_format("Morphun", font = "stampatello")
   logo4 = pyfiglet.figlet_format("Morphun", font = "rozzo")
   #logo5 = pyfiglet.figlet_format("Morphun", font = "roman")
   #logo6 = pyfiglet.figlet_format("Morphun", font = "sblood")
@@ -31,10 +31,10 @@ def print_logo():
 
   
   
-  print(logo)
+  #print(logo)
   print(logo1)
   print(logo2)
-  print(logo3)
+  #print(logo3)
   print(logo4)
   #print(logo5)
   #print(logo6)
