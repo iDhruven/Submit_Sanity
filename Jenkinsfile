@@ -18,8 +18,8 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                            sh "python Submit/SubmitChoice.py"
-                            CHOICE == H
+                            sh "python Submit/SubmitChoice.py | CHOICE == H"
+                            //CHOICE == H
                         }
                     }
                     steps{
