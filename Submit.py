@@ -140,8 +140,7 @@ print("  /     /\   / /\     |      ")
 print(" /     /\ \_/ / /    /|      ")
 print("|     |  \|_|/ /    / |      ")
 print("|     |       |    |  |      ")
-print"|\____\       |____|  /      ", result
+print("|\____\       |____|  /      ", result)
 print("| |    |      |    | /       ")
-print(result)
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
