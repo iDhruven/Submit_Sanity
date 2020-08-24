@@ -18,7 +18,8 @@ pipeline {
                 stage ('Parallel Stage 2'){
                     when {
                         expression {
-                            params.CHOICE == 'H'
+                            import SubmitChoice
+                            SubmitChoice.CHOICE == H
                         }
                     }
                     steps{
