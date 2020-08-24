@@ -17,4 +17,5 @@ def print_logo():
   print(" \|____|      |____|               ")
 
   logo = pyfiglet.figlet_format("Morphun", font = "o8"  ) 
+  logo = pyfiglet.figlet_format("Morphun", font = "poison"  ) 
   print(logo)
