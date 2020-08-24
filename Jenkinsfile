@@ -17,7 +17,9 @@ pipeline {
         
         stage('Submit Script Execution') {
             parallel {
-                stage ('B&I'){
+                stages{
+                    stage('B&I'){
+                        
                     when{
                         expression {
                             return params.CHOICE.contains('B')
