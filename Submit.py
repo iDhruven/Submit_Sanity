@@ -69,7 +69,6 @@ def print_help():
     print ("  -e : send release email")
     print ("  -h,? : this help message")
     print ("")
-    print ("-------------Help Manual End----------")
 
     
 CHOICE=[os.environ['CHOICE']] 
