@@ -11,4 +11,4 @@ RELEASE_EMAIL_FROM= os.system('git config user.email')
 
 RELEASE_EMAIL_TO="morphun-discussion@group.apple.com"
 
-print "EMAIL:", RELEASE_EMAIL_FROM
+print ("EMAIL:", RELEASE_EMAIL_FROM)
