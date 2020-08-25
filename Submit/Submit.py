@@ -1,9 +1,7 @@
 import os
-import turtle
-#import pyfiglet 
+import turtle 
 
 import SubmitHelp
-#import SubmitLogo
 
 from SubmitProjectSettings import *
 
@@ -97,9 +95,8 @@ if CHOICE == T:
 if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
-           
-#Print Logo  
-#python3 Submit/SubmitLogo.py
+  
+  
 
 
 
