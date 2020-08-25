@@ -13,6 +13,7 @@ pipeline {
                 print ("Submit Script begins!")
                 //sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
                 sh 'python Submit/Submit.py'
+                sh 'python3 Submit/SubmitLogo.py'
             }
         }
         
