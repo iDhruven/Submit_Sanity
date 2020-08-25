@@ -12,7 +12,7 @@ pipeline {
             steps{
                 print ("Submit Script begins!")
                 //sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
-                sh 'python Submit/Submit.py'
+                sh 'python3 Submit/Submit.py'
                 sh 'python Submit/SubmitLogo.py'
             }
         }
