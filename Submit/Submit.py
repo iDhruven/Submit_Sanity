@@ -1,6 +1,6 @@
 import os
 import turtle
-import pyfiglet 
+#import pyfiglet 
 
 import SubmitHelp
 import SubmitLogo
