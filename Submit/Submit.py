@@ -96,8 +96,7 @@ if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
   
-  
-
+ver
 
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
