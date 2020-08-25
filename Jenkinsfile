@@ -11,7 +11,7 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
+                //sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
                 sh 'python Submit/Submit.py'
             }
         }
