@@ -38,7 +38,7 @@ RELEASE_EMAIL_SUBMIT=0
 
 #Choice Selection
 CHOICE=[os.environ['CHOICE']] 
-print "You have selected :", CHOICE
+print ("You have selected :", CHOICE)
 
 H = 'H'
 A = 'A'
