@@ -3,7 +3,7 @@ import turtle
 #import pyfiglet 
 
 import SubmitHelp
-import SubmitLogo
+#import SubmitLogo
 
 from SubmitProjectSettings import *
 
