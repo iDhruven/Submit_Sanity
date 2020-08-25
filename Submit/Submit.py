@@ -99,7 +99,7 @@ if CHOICE == R:
   RESUBMIT=1
            
 #Print Logo  
-python3 SubmitLogo.print_logo()
+python3 SubmitLogo.py
 
 
 
