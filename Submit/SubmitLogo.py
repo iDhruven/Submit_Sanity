@@ -30,7 +30,7 @@ def print_logo():
   #logo11 = pyfiglet.figlet_format("Morphun", font = "banner3-D")
 
   
-  print_logo()
+
   #print(logo)
   print(logo1)
   print(logo2)
@@ -43,5 +43,7 @@ def print_logo():
   #print(logo9)
   #print(logo10)
   #print(logo11)
+
+print_logo()
   
   
