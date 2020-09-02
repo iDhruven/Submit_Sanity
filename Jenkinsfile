@@ -14,6 +14,7 @@ pipeline {
                 //sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
                 sh 'python3 Submit/Submit.py'
                 sh 'python Submit/SubmitLogo.py'
+                sh 'python3 Submit/SubmitTag.py'
             }
         }
         
