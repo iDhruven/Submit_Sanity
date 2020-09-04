@@ -13,7 +13,7 @@ pipeline {
                 print ("Submit Script begins!")
                 sh 'python3 Submit.py'
                 sh 'python SubmitLogo.py'
-                //sh 'python3 SubmitTag.py'
+                sh 'python3 SubmitClean.py'
               
             }
         }
