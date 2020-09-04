@@ -11,10 +11,10 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                //sh 'cd /Users/idhruven/.jenkins/workspace/PythonSanity'
-                sh 'python3 Submit/Submit.py'
-                sh 'python Submit/SubmitLogo.py'
-                sh 'python3 Submit/SubmitTag.py'
+                sh 'python3 Submit.py'
+                sh 'python SubmitLogo.py'
+                //sh 'python3 SubmitTag.py'
+              
             }
         }
         
@@ -113,7 +113,48 @@ pipeline {
         
         stage ('Validate'){
             steps{
-                print ("Validating the Submits here!")
+                echo "All Steps Passed!"
+                //input('Do you want to proceed?')
+                script{
+                    //
+                    def USER_INPUT = input(
+                        message: 'User input required - Do you want to make a Major Submit?',
+                        parameters: [
+                                [$class: 'ChoiceParameterDefinition',
+                                choices: ['no','yes'].join('\n'),
+                                name: 'input',
+                                description: 'Menu - select box option']
+                        ])
+
+                    echo "The answer is: ${USER_INPUT}"
+
+                    if( "${USER_INPUT}" == "yes"){
+                        print ("Validating the Submits here!")
+                        sh 'echo "Current Version is --->  $VERSION"'
+                        //print (New_Major_Version + 1)
+                        sh 'python3 SubmitMajorTag.py'
+                    } else {
+                        def USER_INPUT2 = input(
+                        message: 'User input required - Do you want to make a Minor Submit?',
+                        parameters: [
+                                [$class: 'ChoiceParameterDefinition',
+                                choices: ['no','yes'].join('\n'),
+                                name: 'input',
+                                description: 'Menu - select box option']
+                        ])
+                        
+                        echo "The answer is: ${USER_INPUT2}"
+                        
+                        if( "${USER_INPUT2}" == "yes"){
+                            echo "Minor Increasing"
+                            sh 'python3 SubmitMinorTag.py'
+                        } else {
+                            echo "Nothing here!"
+                        }
+                        print ("Validating NOOO the Submits here!")
+                    }
+                }
+                print ("Validating the final Submits here!")
             }
         }
         
@@ -125,7 +166,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-               // deleteDir()
+               //deleteDir()
             }
         }
     }
