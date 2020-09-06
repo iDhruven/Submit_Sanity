@@ -1,5 +1,5 @@
-from SubmitProjectSettings.py import *
-from SubmitMajorTag.py import *
+from Submit/SubmitProjectSettings.py import *
+from Submit/SubmitMajorTag.py import *
 
 ARTIFACTORY_PATH=ARTIFACTORY_URL/libs-release-local/com/apple/csl/morphun/(New_Version)
 TGZ_NAME=morphun-(New_Version)-mac.tgz
