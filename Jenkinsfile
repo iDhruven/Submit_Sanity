@@ -155,6 +155,8 @@ pipeline {
                     }
                 }
                 print ("Validating the final Submits here!")
+                print(ARTIFACTORY_PATH)
+                print(TGZ_NAME)
             }
         }
         
