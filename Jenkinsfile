@@ -132,7 +132,7 @@ pipeline {
                         print ("Validating the Submits here!")
                         sh 'echo "Current Version is --->  $VERSION"'
                         //print (New_Major_Version + 1)
-                        sh 'python3 SubmitMajorTag.py'
+                        sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
                         message: 'User input required - Do you want to make a Minor Submit?',
@@ -147,7 +147,7 @@ pipeline {
                         
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
-                            sh 'python3 SubmitMinorTag.py'
+                            sh 'python3 Submit/SubmitMinorTag.py'
                         } else {
                             echo "Nothing here!"
                         }
