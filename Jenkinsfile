@@ -155,6 +155,7 @@ pipeline {
                     }
                 }
                 print ("Validating the final Submits here!")
+                python3 SubmitUploadArtifactoryPackage.py
             }
         }
         
