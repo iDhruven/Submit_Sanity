@@ -11,9 +11,9 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                sh 'python3 Submit.py'
-                sh 'python SubmitLogo.py'
-                sh 'python3 SubmitClean.py'
+                sh 'python3 Submit/Submit.py'
+                sh 'python Submit/SubmitLogo.py'
+                sh 'python3 Submit/SubmitClean.py'
               
             }
         }
