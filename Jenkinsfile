@@ -131,7 +131,6 @@ pipeline {
                     if( "${USER_INPUT}" == "yes"){
                         print ("Validating the Submits here!")
                         sh 'echo "Current Version is --->  $VERSION"'
-                        //print (New_Major_Version + 1)
                         sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
