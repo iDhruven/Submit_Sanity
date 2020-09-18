@@ -58,6 +58,9 @@ pipeline {
                                 echo "New Version is ---> $NEW_VERSION"
                             '''
                             //sh 'python3 Submit/SubmitMinorTag.py'
+                            environment{
+                                NEW_VERSION=sh($(NEW_VERSION))
+                            }
                         } else {
                             echo "Nothing here!"
                             sh 'NEW_VERSION=$VERSION'
