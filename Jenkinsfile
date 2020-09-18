@@ -32,7 +32,8 @@ pipeline {
 
                     if( "${USER_INPUT}" == "yes"){
                         print ("Validating the Submits here!")
-                        sh 'Num="1000" | echo "$VERSION $Num" | awk '{print $1 * $2}''
+                        sh 'Num="10000"'
+                        sh 'echo "$VERSION $Num" | awk '{print $1 * $2}''
                         sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
