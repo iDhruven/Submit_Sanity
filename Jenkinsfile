@@ -31,13 +31,13 @@ pipeline {
                     echo "The answer is: ${USER_INPUT}"
 
                     if( "${USER_INPUT}" == "yes"){
-                        print ("Validating the Submits here!")
+                        print ("Versioning the Submits here!")
                         sh '''
                             Num="1"
                             NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
-                            echo $NEW_VERSION
+                            echo "New Version is ---> $NEW_VERSION"
                         '''
-                        sh 'python3 Submit/SubmitMajorTag.py'
+                        //sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
                         message: 'User input required - Do you want to make a Minor Submit?',
@@ -55,11 +55,13 @@ pipeline {
                             sh '''
                                 Num="0.1"
                                 NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
-                                echo $NEW_VERSION
+                                echo "New Version is ---> $NEW_VERSION"
                             '''
-                            sh 'python3 Submit/SubmitMinorTag.py'
+                            //sh 'python3 Submit/SubmitMinorTag.py'
                         } else {
                             echo "Nothing here!"
+                            sh 'NEW_VERSION=$VERSION'
+                            sh 'echo "New Version is ---> $NEW_VERSION"'
                         }
                         print ("Validating NOOO the Submits here!")
                     }
