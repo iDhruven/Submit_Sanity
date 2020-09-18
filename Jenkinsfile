@@ -32,7 +32,7 @@ pipeline {
 
                     if( "${USER_INPUT}" == "yes"){
                         print ("Validating the Submits here!")
-                        sh 'echo "Current Version is --->  $VERSION+1000"'
+                        sh 'Num="1000" | echo "NEWW Version is --->  `expr "$VERSION" + "$Num"`""'
                         sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
@@ -48,7 +48,7 @@ pipeline {
                         
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
-                            sh 'echo "Current Version is --->  $VERSION+2000"'
+                            sh 'Num="2000" | echo "NEWW Version is --->  `expr "$VERSION" + "$Num"`""'
                             sh 'python3 Submit/SubmitMinorTag.py'
                         } else {
                             echo "Nothing here!"
