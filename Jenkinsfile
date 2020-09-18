@@ -11,9 +11,9 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                sh 'python3 Submit/Submit.py'
-                sh 'python Submit/SubmitLogo.py'
-                sh 'python3 Submit/SubmitClean.py'
+                sh 'python3 Submit.py'
+                sh 'python SubmitLogo.py'
+                sh 'python3 SubmitClean.py'
                 
                 echo "All Steps Passed!"
                 //input('Do you want to proceed?')
@@ -34,12 +34,15 @@ pipeline {
                         print ("Versioning the Submits here!")
                         sh '''
                             Num="1"
-                            environment{
-                            NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
-                            }
+                            NEW_VERSION=$(echo "$VERSION 1" | awk '{print $1 + $2}')
                             echo "New Version is ---> $NEW_VERSION"
                         '''
-                        //sh 'python3 Submit/SubmitMajorTag.py'
+                        env.NEW_VERSION = sh(script: "python3 MajorTag.py")//,
+                             //returnStdout: true).trim()
+                        //sh 'echo "New Version is ---> $NEW_VERSION"'
+                        //env.NEW_VERSION="${NEW_VERSION}"
+                        echo "NEW_VERSION: ${env.NEW_VERSION}"
+                        //sh 'python3 SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
                         message: 'User input required - Do you want to make a Minor Submit?',
@@ -54,15 +57,12 @@ pipeline {
                         
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
-                            sh '''
-                                Num="0.1"
-                                NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
-                                echo "New Version is ---> $NEW_VERSION"
-                            '''
-                            //sh 'python3 Submit/SubmitMinorTag.py'
-                            environment{
-                                NEW_VERSION=sh($(NEW_VERSION))
-                            }
+                            //sh '''
+                                sh 'Num="0.1"'
+                                sh 'NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')'
+                                sh 'echo "New Version is ---> $NEW_VERSION"'
+                            //'''
+                            //sh 'python3 SubmitMinorTag.py'
                         } else {
                             echo "Nothing here!"
                             sh 'NEW_VERSION=$VERSION'
@@ -72,6 +72,9 @@ pipeline {
                     }
                 }
               
+            }
+            environment{
+                NEW_VERSION="${NEW_VERSION}"
             }
         }
         
@@ -96,7 +99,7 @@ pipeline {
                                 print ("This is B&I Submission Step!")
                             }
                         }
-                     }           
+                     }
                   }
 
                 stage ('Python Morphun'){
@@ -117,7 +120,7 @@ pipeline {
                                 print ("This is Python Morphun Submission Step!")
                             }
                         }
-                     }           
+                     }
                   }
                 
                 stage ('Mobile Assests'){
@@ -138,7 +141,7 @@ pipeline {
                                 print ("This is Mobile Assests Submission Step!")
                             }
                         }
-                     }           
+                     }
                   }
                 //
                 stage ('macOS Artifactory Packages'){
@@ -160,7 +163,7 @@ pipeline {
                                 print ("This is macOS Artifactory Package Submission Step!")
                             }
                         }
-                     }           
+                     }
                   }
                 
 
@@ -171,8 +174,9 @@ pipeline {
         stage ('Validate'){
             steps{
                 print ("Validating the final Submits here!")
-                sh 'python3 Submit/SubmitUploadArtifactoryPackage.py'
-                sh 'python3 Submit/SubmitMobileAssets.py'
+                sh 'echo "New Version is ---> $NEW_VERSION"'
+                sh 'python3 SubmitUploadArtifactoryPackage.py'
+                sh 'python3 SubmitMobileAssets.py'
             }
         }
         
