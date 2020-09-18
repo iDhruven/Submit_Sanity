@@ -6,9 +6,9 @@ from SubmitProjectSettings import *
 from SubmitMajorTag import *
 
 DEBUG_MODE=os.environ['DEBUG_MODE']
-#NEW_VERSION=os.environ['NEW_VERSION']
+NEW_VERSION=os.environ['NEW_VERSION']
 
-print ("ARTIFACTORY VERSION IS ---->" , env.NEW_VERSION)
+print ("ARTIFACTORY VERSION IS ---->" , env.{NEW_VERSION})
 
 print ("Ready to upload to", ARTIFACTORY_URL)
 ARTIFACTORY_PATH= ARTIFACTORY_URL + "/libs-release-local/com/apple/csl/morphun/" + str(NEW_VERSION)
