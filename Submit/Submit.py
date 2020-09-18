@@ -1,5 +1,4 @@
 import os
-import turtle 
 
 import SubmitHelp
 
@@ -13,7 +12,7 @@ DEBUG_MODE=os.environ['DEBUG_MODE']
 print ("Submit script version:", SUBMIT_VERSION)
 print ("Debug Mode:", DEBUG_MODE)
 
-if DEBUG_MODE == 1:
+if DEBUG_MODE == 'TRUE':
   print ("DEBUG MODE ENABLED")
   
 # Files 
@@ -96,6 +95,6 @@ if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
  
-#python3 SubmitVersion.py
+#python SubmitVersion.py
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
