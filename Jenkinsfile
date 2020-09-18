@@ -34,7 +34,9 @@ pipeline {
                         print ("Versioning the Submits here!")
                         sh '''
                             Num="1"
+                            environment{
                             NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
+                            }
                             echo "New Version is ---> $NEW_VERSION"
                         '''
                         //sh 'python3 Submit/SubmitMajorTag.py'
