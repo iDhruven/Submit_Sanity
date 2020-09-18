@@ -11,9 +11,9 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                sh 'python3 Submit.py'
-                sh 'python SubmitLogo.py'
-                sh 'python3 SubmitClean.py'
+                sh 'python3 Submit/Submit.py'
+                sh 'python Submit/SubmitLogo.py'
+                sh 'python3 Submit/SubmitClean.py'
               
             }
         }
@@ -131,7 +131,7 @@ pipeline {
                     if( "${USER_INPUT}" == "yes"){
                         print ("Validating the Submits here!")
                         sh 'echo "Current Version is --->  $VERSION"'
-                        sh 'python3 SubmitMajorTag.py'
+                        sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
                         message: 'User input required - Do you want to make a Minor Submit?',
@@ -146,7 +146,7 @@ pipeline {
                         
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
-                            sh 'python3 SubmitMinorTag.py'
+                            sh 'python3 Submit/SubmitMinorTag.py'
                         } else {
                             echo "Nothing here!"
                         }
@@ -154,8 +154,8 @@ pipeline {
                     }
                 }
                 print ("Validating the final Submits here!")
-                sh 'python3 SubmitUploadArtifactoryPackage.py'
-                sh 'python3 SubmitMobileAssets.py'
+                sh 'python3 Submit/SubmitUploadArtifactoryPackage.py'
+                sh 'python3 Submit/SubmitMobileAssets.py'
             }
         }
         
