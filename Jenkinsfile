@@ -14,6 +14,47 @@ pipeline {
                 sh 'python3 Submit/Submit.py'
                 sh 'python Submit/SubmitLogo.py'
                 sh 'python3 Submit/SubmitClean.py'
+                
+                echo "All Steps Passed!"
+                //input('Do you want to proceed?')
+                script{
+                    //
+                    def USER_INPUT = input(
+                        message: 'User input required - Do you want to make a Major Submit?',
+                        parameters: [
+                                [$class: 'ChoiceParameterDefinition',
+                                choices: ['no','yes'].join('\n'),
+                                name: 'input',
+                                description: 'Menu - select box option']
+                        ])
+
+                    echo "The answer is: ${USER_INPUT}"
+
+                    if( "${USER_INPUT}" == "yes"){
+                        print ("Validating the Submits here!")
+                        sh 'echo "Current Version is --->  $VERSION"'
+                        sh 'python3 Submit/SubmitMajorTag.py'
+                    } else {
+                        def USER_INPUT2 = input(
+                        message: 'User input required - Do you want to make a Minor Submit?',
+                        parameters: [
+                                [$class: 'ChoiceParameterDefinition',
+                                choices: ['no','yes'].join('\n'),
+                                name: 'input',
+                                description: 'Menu - select box option']
+                        ])
+                        
+                        echo "The answer is: ${USER_INPUT2}"
+                        
+                        if( "${USER_INPUT2}" == "yes"){
+                            echo "Minor Increasing"
+                            sh 'python3 Submit/SubmitMinorTag.py'
+                        } else {
+                            echo "Nothing here!"
+                        }
+                        print ("Validating NOOO the Submits here!")
+                    }
+                }
               
             }
         }
