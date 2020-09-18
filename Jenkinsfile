@@ -35,7 +35,8 @@ pipeline {
                         sh 'Num="10000"'
                         sh '''
                         Num="1000"
-                        echo "$VERSION $Num" | awk '{print $1 * $2}'
+                        NEW_VERSION=echo "$VERSION $Num" | awk '{print $1 * $2}'
+                        echo $NEW_VERSION
                         '''
                         sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
