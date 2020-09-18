@@ -33,8 +33,8 @@ pipeline {
                     if( "${USER_INPUT}" == "yes"){
                         print ("Validating the Submits here!")
                         sh '''
-                            Num="1000"
-                            NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 * $2}')
+                            Num="1"
+                            NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
                             echo $NEW_VERSION
                         '''
                         sh 'python3 Submit/SubmitMajorTag.py'
@@ -53,8 +53,8 @@ pipeline {
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
                             sh '''
-                                Num="2000"
-                                NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 * $2}')
+                                Num="0.1"
+                                NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')
                                 echo $NEW_VERSION
                             '''
                             sh 'python3 Submit/SubmitMinorTag.py'
