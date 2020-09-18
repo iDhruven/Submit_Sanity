@@ -34,7 +34,8 @@ pipeline {
                         print ("Validating the Submits here!")
                         sh 'Num="10000"'
                         sh '''
-                        echo "5 10" | awk '{print $1 * $2}'
+                        Num="1000"
+                        echo "5 $Num" | awk '{print $1 * $2}'
                         '''
                         sh 'python3 Submit/SubmitMajorTag.py'
                     } else {
