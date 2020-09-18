@@ -8,8 +8,8 @@ from SubmitMajorTag import *
 DEBUG_MODE=os.environ['DEBUG_MODE']
 
 print ("Ready to upload to", ARTIFACTORY_URL)
-ARTIFACTORY_PATH= ARTIFACTORY_URL + "/libs-release-local/com/apple/csl/morphun/" + str(New_Version)
-TGZ_NAME="morphun-"+ str(New_Version) + "-mac.tgz"
+ARTIFACTORY_PATH= ARTIFACTORY_URL + "/libs-release-local/com/apple/csl/morphun/" + str(NEW_VERSION)
+TGZ_NAME="morphun-"+ str(NEW_VERSION) + "-mac.tgz"
 
 print("Artifactory Path:", ARTIFACTORY_PATH)
 print("TGZ Name:", TGZ_NAME)
@@ -22,7 +22,7 @@ print ("Artifactory Password:", ARTIFACTORY_PASSWORD)
 
 if 1 == 0:
 #if curl --head -f -s -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASSWORD $ARTIFACTORY_PATH/$TGZ_NAME > /dev/null:
-    print ("Version " + str(New_Version) + " already exists in artifactory. Skipping upload.")
+    print ("Version " + str(NEW_VERSION) + " already exists in artifactory. Skipping upload.")
 else:
   
 #------------------------------------------------------------------#
