@@ -1,7 +1,6 @@
 import pyfiglet 
 
 #Morphun Logo
-
 def print_logo():
   
   print("-----------------COOL MORPHUN LOGO------------------")  
@@ -45,5 +44,3 @@ def print_logo():
   #print(logo11)
 
 print_logo()
-  
-  
