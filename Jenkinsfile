@@ -11,12 +11,12 @@ pipeline {
         stage('Submit Script'){
             steps{
                 print ("Submit Script begins!")
-                sh 'python3 Submit.py'
-                sh 'python SubmitLogo.py'
-                sh 'python3 SubmitClean.py'
-                
+                sh '''
+                    python3 Submit.py
+                    python SubmitLogo.py
+                    python3 SubmitClean.py
+                '''
                 echo "All Steps Passed!"
-                //input('Do you want to proceed?')
                 script{
                     //
                     def USER_INPUT = input(
@@ -33,16 +33,11 @@ pipeline {
                     if( "${USER_INPUT}" == "yes"){
                         print ("Versioning the Submits here!")
                         sh '''
-                            Num="1"
-                            NEW_VERSION=$(echo "$VERSION 1" | awk '{print $1 + $2}')
-                            echo "New Version is ---> $NEW_VERSION"
+                            python3 SubmitMajorTag.py > File.py
+                            cat File.py
+                            python3 DelFile.py
+                            cat File.py
                         '''
-                        env.NEW_VERSION = sh(script: "python3 MajorTag.py")//,
-                             //returnStdout: true).trim()
-                        //sh 'echo "New Version is ---> $NEW_VERSION"'
-                        //env.NEW_VERSION="${NEW_VERSION}"
-                        echo "NEW_VERSION: ${env.NEW_VERSION}"
-                        //sh 'python3 SubmitMajorTag.py'
                     } else {
                         def USER_INPUT2 = input(
                         message: 'User input required - Do you want to make a Minor Submit?',
@@ -57,24 +52,27 @@ pipeline {
                         
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
-                            //sh '''
-                                sh 'Num="0.1"'
-                                sh 'NEW_VERSION=$(echo "$VERSION $Num" | awk '{print $1 + $2}')'
-                                sh 'echo "New Version is ---> $NEW_VERSION"'
-                            //'''
-                            //sh 'python3 SubmitMinorTag.py'
+                            sh '''
+                                python3 SubmitMinorTag.py > File.py
+                                cat File.py
+                                python3 DelFile.py
+                                cat File.py
+                            '''
                         } else {
                             echo "Nothing here!"
-                            sh 'NEW_VERSION=$VERSION'
-                            sh 'echo "New Version is ---> $NEW_VERSION"'
+                            sh '''
+                                python3 SubmitCurrentTag.py > File.py
+                                cat File.py
+                                python3 DelFile.py
+                                cat File.py
+                            '''
+                            NEW_VERSION=params.VERSION
+                            echo "New Version is still the same as the Current Version ---> $NEW_VERSION"
                         }
                         print ("Validating NOOO the Submits here!")
                     }
                 }
               
-            }
-            environment{
-                NEW_VERSION="${NEW_VERSION}"
             }
         }
         
@@ -106,7 +104,7 @@ pipeline {
                     agent any
                     when {
                         expression {
-                            return params.CHOICE.contains('L')
+                            return params.CHOICE.contains('L') | params.CHOICE.contains('A')
                         }
                     }
                     stages{
@@ -118,6 +116,7 @@ pipeline {
                         stage ('Submit to Python Morphun'){
                             steps{
                                 print ("This is Python Morphun Submission Step!")
+                                sh 'python3 SubmitPyMorphun.py'
                             }
                         }
                      }
@@ -127,7 +126,7 @@ pipeline {
                     agent any
                     when {
                         expression {
-                            return params.CHOICE.contains('M')
+                            return params.CHOICE.contains('M')| params.CHOICE.contains('A')
                         }
                     }
                     stages{
@@ -139,6 +138,7 @@ pipeline {
                         stage ('Submit to Mobile Assests'){
                             steps{
                                 print ("This is Mobile Assests Submission Step!")
+                                sh 'python SubmitMobileAssets.py'
                             }
                         }
                      }
@@ -161,6 +161,7 @@ pipeline {
                             steps{
                                 //
                                 print ("This is macOS Artifactory Package Submission Step!")
+                                sh 'python3 SubmitUploadArtifactoryPackage.py'
                             }
                         }
                      }
@@ -175,8 +176,7 @@ pipeline {
             steps{
                 print ("Validating the final Submits here!")
                 sh 'echo "New Version is ---> $NEW_VERSION"'
-                sh 'python3 SubmitUploadArtifactoryPackage.py'
-                sh 'python3 SubmitMobileAssets.py'
+                //sh 'python SubmitMobileAssets.py'
             }
         }
         
@@ -188,7 +188,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-               //deleteDir()
+                deleteDir()
             }
         }
     }
