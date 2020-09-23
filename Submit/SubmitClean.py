@@ -1,5 +1,7 @@
 import os
 
+print ("------------------------------The Cleaning Begins here--------------------------------------")
+
 print ("Cleaning Project...")
 os.system('make clean > /dev/null')
 
@@ -12,3 +14,5 @@ os.system('cd ..')
 # Clean Python Morphun
 print ("Cleaning Python Morphun...")
 os.system('make -C interface/python clean > /dev/null')
+
+print ("------------------------------The Cleaning Ends here--------------------------------------")
