@@ -94,7 +94,5 @@ if CHOICE == T:
 if CHOICE == R:
   print ("Resubmit Script comes here!")
   RESUBMIT=1
- 
-#python SubmitVersion.py
 
 print ("--------------------------------The Submit Script Ends here-------------------------------------------")
