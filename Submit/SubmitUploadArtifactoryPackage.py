@@ -4,11 +4,15 @@ import shutil
 from Submit import *
 from SubmitProjectSettings import *
 from SubmitMajorTag import *
+from File import NEW_VERSION
+
+
+print ("------------------------------The Uploading Artifactory Package Begins here--------------------------------------")
+
 
 DEBUG_MODE=os.environ['DEBUG_MODE']
-NEW_VERSION=os.environ['NEW_VERSION']
 
-print ("ARTIFACTORY VERSION IS ---->" , env.{NEW_VERSION})
+print ("New Version:",NEW_VERSION)
 
 print ("Ready to upload to", ARTIFACTORY_URL)
 ARTIFACTORY_PATH= ARTIFACTORY_URL + "/libs-release-local/com/apple/csl/morphun/" + str(NEW_VERSION)
@@ -55,4 +59,4 @@ else:
   else:
     print ("FAILED!")
 
-
+print ("------------------------------The Uploading Artifactory Package Ends here--------------------------------------")
