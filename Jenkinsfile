@@ -12,9 +12,9 @@ pipeline {
             steps{
                 print ("Submit Script begins!")
                 sh '''
-                    python3 Submit.py
-                    python SubmitLogo.py
-                    python3 SubmitClean.py
+                    python3 Submit/Submit.py
+                    python Submit/SubmitLogo.py
+                    python3 Submit/SubmitClean.py
                 '''
                 echo "All Steps Passed!"
                 script{
@@ -33,7 +33,7 @@ pipeline {
                     if( "${USER_INPUT}" == "yes"){
                         print ("Versioning the Submits here!")
                         sh '''
-                            python3 SubmitMajorTag.py > File.py
+                            python3 Submit/SubmitMajorTag.py > File.py
                             cat File.py
                             python3 DelFile.py
                             cat File.py
@@ -53,7 +53,7 @@ pipeline {
                         if( "${USER_INPUT2}" == "yes"){
                             echo "Minor Increasing"
                             sh '''
-                                python3 SubmitMinorTag.py > File.py
+                                python3 Submit/SubmitMinorTag.py > File.py
                                 cat File.py
                                 python3 DelFile.py
                                 cat File.py
@@ -61,7 +61,7 @@ pipeline {
                         } else {
                             echo "Nothing here!"
                             sh '''
-                                python3 SubmitCurrentTag.py > File.py
+                                python3 Submit/SubmitCurrentTag.py > File.py
                                 cat File.py
                                 python3 DelFile.py
                                 cat File.py
@@ -138,7 +138,7 @@ pipeline {
                         stage ('Submit to Mobile Assests'){
                             steps{
                                 print ("This is Mobile Assests Submission Step!")
-                                sh 'python SubmitMobileAssets.py'
+                                sh 'python Submit/SubmitMobileAssets.py'
                             }
                         }
                      }
@@ -161,7 +161,7 @@ pipeline {
                             steps{
                                 //
                                 print ("This is macOS Artifactory Package Submission Step!")
-                                sh 'python3 SubmitUploadArtifactoryPackage.py'
+                                sh 'python3 Submit/SubmitUploadArtifactoryPackage.py'
                             }
                         }
                      }
